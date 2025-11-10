@@ -11,10 +11,15 @@ Turn an approved initiative into an actionable plan and backlog for delivery.
 ## Activities
 1. Kickoff meeting with stakeholders and delivery team
 2. Create prioritized backlog with acceptance criteria
+   - **UX Designer**: Provide design requirements, mockups, and user flow dependencies
+   - **QA Lead**: Review acceptance criteria for testability and quality standards
 3. Estimate scope (T-shirt sizing or story points)
 4. Define Definition of Done (DoD)
+   - Include design review, QA sign-off, and deployment readiness criteria
 5. Identify dependencies and integration points
+   - **DevOps Engineer**: Flag infrastructure or deployment dependencies
 6. Create release plan and milestone map
+   - **DevOps Engineer**: Confirm deployment windows and infrastructure readiness
 
 ## Backlog Item Template
 - Title:
@@ -23,6 +28,8 @@ Turn an approved initiative into an actionable plan and backlog for delivery.
 - Priority:
 - Estimate:
 - Owner:
+- Design required: (Yes/No - if yes, UX Designer involved)
+- QA approach: (Unit/Integration/E2E/Manual)
 - Related docs/links:
 
 ## Sprint / Iteration Planning
@@ -36,8 +43,11 @@ Turn an approved initiative into an actionable plan and backlog for delivery.
 - Mark cross-team dependencies in the project board and escalate during weekly syncs
 
 ## Planning Checklist
-- [ ] Project kickoff held
+- [ ] Project kickoff held with all relevant roles (PM, PdM, Developers, UX Designer, QA Lead, DevOps Engineer)
 - [ ] Backlog prioritized and estimated
+- [ ] Design requirements and dependencies identified (UX Designer)
 - [ ] Release timeline and milestones agreed
-- [ ] Definition of Done documented
-- [ ] Initial test plan / QA approach drafted
+- [ ] Infrastructure and deployment requirements confirmed (DevOps Engineer)
+- [ ] Definition of Done documented with quality and design criteria
+- [ ] Initial test plan / QA approach drafted (QA Lead)
+- [ ] Customer impact and support considerations reviewed (Customer Support Liaison)

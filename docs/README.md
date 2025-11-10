@@ -55,7 +55,9 @@ The planning phase transforms an approved initiative into an actionable delivery
 - Release timeline with milestones
 - Definition of Done documentation
 - Risk register with mitigation strategies
-- Initial test plan and QA approach
+- Initial test plan and QA approach (QA Lead)
+- Design requirements and dependencies identified (UX Designer)
+- Infrastructure and deployment requirements (DevOps Engineer)
 
 ### 3. Execution
 
@@ -80,8 +82,9 @@ The execution phase focuses on day-to-day development, testing, and progress tra
 - Unit tests for new logic
 - Integration tests where applicable
 - End-to-end smoke tests for critical flows
-- Security scanning in CI
-- Manual QA for feature acceptance when needed
+- Security scanning in CI (DevOps Engineer)
+- Manual QA for feature acceptance (QA Lead)
+- Usability validation for new features (UX Designer)
 
 ### 4. Release & Deployment
 
@@ -95,19 +98,22 @@ The release phase standardizes how features reach production with minimal risk.
 **Pre-release Requirements:**
 - All acceptance criteria met and PRs merged
 - Passing CI and security scans
+- Design QA completed for user-facing changes (UX Designer)
+- All tests passed, regression testing complete (QA Lead)
+- Infrastructure and deployment automation verified (DevOps Engineer)
 - Release notes drafted
 - Rollback/mitigation plan documented
 - Smoke tests prepared
 
 **Deployment Process:**
 1. Schedule deployment window (if needed)
-2. Create backup or snapshot (if applicable)
-3. Deploy to staging and run smoke tests
-4. Deploy to production (automated pipeline preferred)
-5. Run post-deploy verifications
-6. Announce release to stakeholders and support
+2. Create backup or snapshot (if applicable) - DevOps Engineer
+3. Deploy to staging and run smoke tests - DevOps Engineer, QA Lead
+4. Deploy to production (automated pipeline preferred) - DevOps Engineer
+5. Run post-deploy verifications - QA Lead, DevOps Engineer
+6. Announce release to stakeholders and support - PM, Customer Support Liaison
 
-**Rollback Plan:** If deployment fails or causes critical issues, trigger incident response, rollback to last known-good release if necessary, and capture action items for improvement.
+**Rollback Plan:** If deployment fails or causes critical issues, DevOps Engineer triggers incident response and performs rollback to last known-good release if necessary. QA Lead verifies rollback success. Customer Support Liaison communicates status to affected customers. Team captures action items for improvement.
 
 ### 5. Retrospective & Continuous Improvement
 
@@ -123,10 +129,13 @@ The retrospective phase captures learnings and converts them into actionable imp
 
 **Best Practices:**
 - Timebox to 45–75 minutes depending on team size
+- Include all team roles (Developers, PM, PdM, QA Lead, DevOps Engineer, UX Designer, Customer Support Liaison)
 - Use anonymous idea boards when needed to encourage candor
 - Prioritize 2–3 top action items to avoid overload
 - Add action items to backlog with clear owners and timelines
 - Measure impact of improvements and celebrate progress
+- Customer Support Liaison shares customer feedback trends
+- UX Designer highlights usability learnings and design improvements
 
 ## Roles & Responsibilities
 
@@ -179,6 +188,62 @@ The retrospective phase captures learnings and converts them into actionable imp
 - Communicate organizational priorities and constraints
 
 **Communication:** Monthly stakeholder updates, milestone reviews, and ad-hoc escalations as needed.
+
+### UX Designer
+
+**Role Summary:** UX Designers define and improve the user experience by creating wireframes, prototypes, and design systems to ensure products are intuitive and meet user needs.
+
+**Key Responsibilities:**
+- Conduct user research and usability testing
+- Create wireframes, mockups, and interactive prototypes
+- Define and maintain design systems and style guides
+- Collaborate with Product Managers on requirements and user flows
+- Provide design specifications and assets to Developers
+- Participate in design reviews and user acceptance testing
+
+**Communication:** Design reviews, user research findings, design specs via design tools, and sprint planning alignment.
+
+### QA Lead
+
+**Role Summary:** QA Leads own the quality strategy and coordinate all testing activities to ensure features meet acceptance criteria and quality standards.
+
+**Key Responsibilities:**
+- Define and maintain test strategy and quality standards
+- Plan and coordinate manual and automated test activities
+- Create test plans, test cases, and track defects
+- Ensure acceptance criteria coverage for all features
+- Lead regression testing before releases
+- Advocate for quality improvements and preventive measures
+
+**Communication:** Daily standups, bug reports, test status updates in sprint reviews, and quality metrics dashboards.
+
+### DevOps Engineer
+
+**Role Summary:** DevOps Engineers manage infrastructure, CI/CD pipelines, and deployment automation to enable reliable, repeatable releases and maintain system health.
+
+**Key Responsibilities:**
+- Design, build, and maintain CI/CD pipelines
+- Manage infrastructure as code (IaC) and cloud resources
+- Monitor system health, performance, and availability
+- Automate deployment processes and rollback procedures
+- Support incident triage and resolution
+- Implement security best practices in deployment workflows
+
+**Communication:** Deployment status updates, incident reports and post-mortems, infrastructure change notifications, and CI/CD metrics.
+
+### Customer Support Liaison
+
+**Role Summary:** Customer Support Liaisons represent the voice of the customer within the development team, surfacing user feedback and keeping support teams informed about product changes.
+
+**Key Responsibilities:**
+- Collect and analyze customer feedback and pain points
+- Relay feature requests and bug reports to the product team
+- Provide context on customer impact for prioritization
+- Communicate upcoming changes and release notes to support teams
+- Participate in user acceptance testing from a support perspective
+- Document common issues and workarounds for support knowledge base
+
+**Communication:** Weekly summaries of customer feedback trends, bug reports with customer impact context, and release announcements for support teams.
 
 ## Communication Strategies
 
